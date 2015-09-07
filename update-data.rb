@@ -3,7 +3,6 @@
 require 'rubygems'
 require 'open-uri'
 require 'json'
-#require 'nokogiri'
 
 
 DATA_DIR="data"
@@ -12,11 +11,10 @@ Dir.mkdir(DATA_DIR) unless File.exists?(DATA_DIR)
 BASE_URL = "http://fantasy.premierleague.com/web/api/elements/"
 
 (1..700).each do |i|
-#  puts "#{BASE_URL}#{i}"
   player_url = BASE_URL + "#{i}"
   puts "Fetching #{player_url}" 
   begin
-    player_data = JSON.parse(open("#{player_url}").read)
+    player_data = JSON.parse(open(player_url).read)
     player_content = open(player_url).read
   rescue Exception=>e
       puts "Error: #{e}"
