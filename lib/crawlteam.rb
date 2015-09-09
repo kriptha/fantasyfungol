@@ -6,7 +6,7 @@ require 'open-uri'
 require 'net/http'
 
 
-class Crawlteam
+def Crawlteam
   team = "2479888"
   event = 0
   loop do
