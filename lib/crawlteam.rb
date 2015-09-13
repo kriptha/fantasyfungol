@@ -1,11 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-require 'nokogiri'
-require 'open-uri'
-require 'net/http'
-
-
 def crawlteam
   team = "2479888"
   event = gameweek

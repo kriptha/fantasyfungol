@@ -1,14 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-require 'open-uri'
-require 'json'
-
-
-#DATA_DIR="/var/fantasyfungol/data"
 def updatedata
   Dir.mkdir(DATA_DIR) unless File.exists?(DATA_DIR)
-#  BASE_URL = "http://fantasy.premierleague.com/web/api/elements/"
   (1..600).each do |i|
     player_url = BASE_URL + "#{i}"
     puts "Fetching #{player_url}" 

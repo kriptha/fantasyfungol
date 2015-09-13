@@ -1,6 +1,12 @@
 #!/usr/bin/env ruby
 
 require 'highline/import'
+require 'json'
+require 'nokogiri'
+require 'open-uri'
+require 'plotly'
+require 'openssl'
+
 Dir["./lib/*.rb"].each {|file| require file }
 
 DATA_DIR = "/var/fantasyfungol/data/"

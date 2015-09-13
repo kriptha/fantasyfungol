@@ -1,11 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'json'
-require 'plotly'
-require 'openssl'
-
 def worst(players)
-
   ap_plot = Array.new
   as_plot = Array.new
   player_plot = ""
@@ -22,21 +17,17 @@ def worst(players)
   end
   player_plot = Worstplot(ap_plot, as_plot) 
   return player_plot
-  
 end
 
 def Worstplot(ap_plot, as_plot)
-
   plotly = PlotLy.new('kriptha', 'ye5fccpil2')
   puts "#{ap_plot}"
   puts "#{as_plot}"
-
   data = [
         { x: ap_plot ,
           y: as_plot
         } 
       ]
-
       args = {
         filename: 'antirendiment',
         fileopt: 'overwrite',
@@ -46,9 +37,7 @@ def Worstplot(ap_plot, as_plot)
         },
         world_readable: true
       }
-
     plotly.plot(data, args) do |response|
     return response['url']
     end
-
 end
