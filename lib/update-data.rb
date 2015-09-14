@@ -14,7 +14,7 @@ def updatedata
     else
       player_name = player_data.fetch("web_name")
       puts "Player name : #{player_name}"
-      local_fname = "#{DATA_DIR}/#{File.basename(player_name)}"
+      local_fname = "#{DATA_DIR}#{File.basename(player_name)}"
       File.open(local_fname, 'w'){|file| file.write(player_content)}
       puts "\t...Success, saved to #{local_fname}"
     ensure

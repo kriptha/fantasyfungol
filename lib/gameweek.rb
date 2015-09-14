@@ -7,5 +7,8 @@ def gameweek
   fixtures = player_data.fetch("fixtures")
   summary = fixtures.fetch("summary")
   nextmatch = summary[0]
-  return nextmatch[0]
+  nextcurrentmatch = nextmatch[0]
+  currentmatch = nextcurrentmatch - 1
+  return currentmatch
+  #return nextmatch[0]
 end
