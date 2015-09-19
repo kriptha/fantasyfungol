@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 
 def updatedata
   Dir.mkdir(DATA_DIR) unless File.exists?(DATA_DIR)

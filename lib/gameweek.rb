@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 
 def gameweek
   files = Dir.entries("#{DATA_DIR}")
@@ -10,5 +9,4 @@ def gameweek
   nextcurrentmatch = nextmatch[0]
   currentmatch = nextcurrentmatch - 1
   return currentmatch
-  #return nextmatch[0]
 end
