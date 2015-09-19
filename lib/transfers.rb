@@ -19,7 +19,19 @@ def best(position)
     player_hash = { :score => player_score, :player => player, :points => points, :team => team_name, :next_match => match, :price => now_cost }
     player_array.insert(-1, player_hash)
     player_array = player_array.sort_by { |a| a[:score] }
-    player_array = player_array.take(5)
+    if position == 'Goalkeeper'
+      count = 5
+    end
+    if position == 'Defender'
+      count = 10
+    end
+    if position == 'Midfielder'
+      count = 10
+    end
+    if position == 'Forward'
+      count = 8
+    end
+    player_array = player_array.take(count)
   end
   puts "Legend:   Player            Points          Team            Next match          Price"
   player_array.each do |x|
