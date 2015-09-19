@@ -7,6 +7,8 @@ def worst(players)
     player_data = JSON.parse(open("#{DATA_DIR}#{player}").read)
     minutes = player_data.fetch("minutes")
     points = player_data.fetch("total_points")
+    next if points == 0
+    next if points < 0
     price = player_data.fetch("now_cost")
     player_score = ( minutes / points ) * price 
     ap_plot.insert(-1, "#{player}")
