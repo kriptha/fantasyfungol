@@ -10,7 +10,7 @@ def best(position)
     points = player_data.fetch("total_points")
     price = player_data.fetch("now_cost")
     team_name = player_data.fetch("team_name")
-    match = player_data.fetch("current_fixture")
+    match = player_data.fetch("next_fixture")
     now_cost = player_data.fetch("now_cost")
     next if points == 0
     next if points < 0
