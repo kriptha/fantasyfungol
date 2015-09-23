@@ -11,7 +11,8 @@ Dir["./lib/*.rb"].each {|file| require file }
 
 DATA_DIR = "/var/fantasyfungol/data/"
 BASE_URL = "http://fantasy.premierleague.com/web/api/elements/"
-TEAM = "2479888"
+TEAM = "296665"
+#TEAM = "2479888"
 #TEAM = "763137"
 
 
@@ -23,6 +24,7 @@ loop do
     menu.choice(:"Worst performing players") { puts worst(crawlteam) }
     menu.choice(:"Interesting transfers") { transfers }
     menu.choice(:"Update player data (can take up to 10 minutes...) ") { updatedata }
+    menu.choice(:"Get the team news") { teamnews(crawlteam) }
   end
   puts ""
   puts ""
