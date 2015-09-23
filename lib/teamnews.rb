@@ -1,6 +1,5 @@
 def teamnews(players)
   puts ""
-  myteam = Array.new
   players.each do |player|
     player_data = JSON.parse(open("#{DATA_DIR}#{player}").read)
     unless (player_data.fetch("news")) == ''
