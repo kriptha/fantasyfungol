@@ -37,6 +37,7 @@ def worstplot(ap_plot, as_plot)
         world_readable: true
       }
     plotly.plot(data, args) do |response|
+    Launchy.open(response['url'])
     return response['url']
     end
 end

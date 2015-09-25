@@ -10,7 +10,7 @@ To install the software:
 
  - sudo chown youruser.yourgroup /var/fantasyfungol
 
- - gem install highline nokogiri plotly
+ - gem install highline nokogiri plotly launchy
 
  - then run main.rb and in the first run execute update-data command
 

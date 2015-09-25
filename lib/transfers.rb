@@ -1,6 +1,7 @@
 
 def best(position)
   player_array = Array.new
+  puts ""
   Dir.foreach("#{DATA_DIR}") do |player|
     next if player == '.' or player == '..'
     player_data = JSON.parse(open("#{DATA_DIR}#{player}").read)
@@ -33,14 +34,13 @@ def best(position)
     end
     player_array = player_array.take(count)
   end
-  puts "Legend:   Player            Points          Team            Next match          Price"
   player_array.each do |x|
     player = x[:player]
     points = x[:points]
     team = x[:team]
     next_match = x[:next_match]
     price = x[:price]
-    puts "          #{player}            #{points}            #{team}            #{next_match}           #{price}"
+    printf " %15s %s %s    %s %s    %s %s    %s %s\n", player, "Points:", points, "Team:", team, "Next Match:", next_match, "Price:", price
   end
   return
 end
