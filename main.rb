@@ -25,8 +25,8 @@ loop do
     menu.choice(:"Interesting transfers") { transfers }
     menu.choice(:"Update player data (can take up to 10 minutes...) ") { updatedata }
     menu.choice(:"Get the team news") { teamnews(crawlteam) }
+    menu.choice(:"see ppm and ppmpp for your team") { my_team_value(crawlteam) }
   end
-  puts ""
   puts ""
 end
 
