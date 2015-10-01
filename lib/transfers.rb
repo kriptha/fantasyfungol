@@ -1,4 +1,6 @@
-
+#
+# This lib is to recommend you new transfers. You can choose position you want so search is more acurated
+#
 def best(position)
   player_array = Array.new
   puts ""

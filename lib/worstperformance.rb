@@ -1,4 +1,6 @@
-
+#
+# This lib is to build a plot about your worst performing players
+#
 def worst(players)
   ap_plot = Array.new
   as_plot = Array.new

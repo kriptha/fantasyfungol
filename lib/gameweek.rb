@@ -1,4 +1,6 @@
-
+#
+# This function search in a random json of a player for  which is the current gw. It returns an integer.
+#
 def gameweek
   files = Dir.entries("#{DATA_DIR}")
   player = files.sample

@@ -1,3 +1,6 @@
+#
+# This function calls crawlteam to search your players and output your team news
+#
 def teamnews(players)
   puts ""
   players.each do |player|

@@ -1,4 +1,6 @@
-
+#
+# function crawlteam returns an array of players in current team
+#
 def crawlteam
   event = gameweek
   a_player = Array.new

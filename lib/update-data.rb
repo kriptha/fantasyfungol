@@ -1,4 +1,6 @@
-
+#
+# This lib is to update all data from fantasy servers while crawling jsons and storing them.
+#
 def updatedata
   Dir.mkdir(DATA_DIR) unless File.exists?(DATA_DIR)
   (1..615).each do |i|
