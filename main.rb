@@ -27,6 +27,7 @@ loop do
     menu.choice(:"Update player data (can take up to 10 minutes...) ") { updatedata }
     menu.choice(:"Get the team news") { teamnews(crawlteam) }
     menu.choice(:"see ppm and ppmpp for your team") { my_team_value(crawlteam) }
+    menu.choice(:"Sandro Rey") { sandrorey }
     menu.choice(:"Quit") { exit }
   end
   puts ""
