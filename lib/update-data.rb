@@ -3,7 +3,7 @@
 #
 def updatedata
   Dir.mkdir(DATA_DIR) unless File.exists?(DATA_DIR)
-  (1..615).each do |i|
+  (1..650).each do |i|
     player_url = BASE_URL + "#{i}"
     puts "Fetching #{player_url}" 
     begin

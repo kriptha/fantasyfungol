@@ -13,6 +13,7 @@ Dir["./lib/*.rb"].each {|file| require file }
 DATA_DIR = "/var/fantasyfungol/data/"
 BASE_URL = "http://fantasy.premierleague.com/web/api/elements/"
 #TEAM = "296665"   # B
+#TEAM = "2546887"   # maki
 TEAM = "2479888"   # mrk
 #TEAM = "763137"   # M
 
